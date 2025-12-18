@@ -8,7 +8,7 @@ description = "Cookiecutter template for a base library python package"
 readme = "README.md"
 urls.repository = "https://github.com/treai-rnd/cookiecutter-basic-pylib"
 authors = [{ name = "TRE Altamira", email = "rand@tre-altamira.com" }]
-license = { file = "LICENSE" }
+license-files = ["LICENSE"]
 
 dynamic = ["version"]  # Version will be set by setuptools_scm according to git tag
 requires-python = ">=3.10"

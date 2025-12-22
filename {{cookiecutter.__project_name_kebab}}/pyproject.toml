@@ -8,7 +8,7 @@ description = "{{ cookiecutter.project_short_description }}"
 readme = "README.md"
 urls.repository = "https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.__project_name_kebab }}"
 authors = [{ name = "{{ cookiecutter.author_name }}", email = "{{ cookiecutter.author_email }}" }]
-license = { file = "LICENSE" }
+license-files = ["LICENSE"]
 
 dynamic = ["version"]  # Version will be set by setuptools_scm according to git tag
 requires-python = ">=3.10"
@@ -23,12 +23,13 @@ optional-dependencies.dev = [
 	"pytest-mock",
 	"pylint",
 	"black",
+	"isort",
 	"mypy",
 	"nbstripout",
 ]
 
 [tool.setuptools.packages.find]
-include = ["{{ cookiecutter.__project_name_snake }}"]
+include = ["{{ cookiecutter.__project_name_snake }}*"]
 
 [tool.setuptools_scm]
 write_to = "./{{ cookiecutter.__project_name_snake }}/_version.py"

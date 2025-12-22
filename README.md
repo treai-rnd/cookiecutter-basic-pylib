@@ -15,7 +15,7 @@ pip install --upgrade cookiecutter
 ## Generate new project using this cookiecutter
 
 ```sh
-cookiecutter gh:treai-foundations/cookiecutter-basic-pylib
+cookiecutter gh:treai-rnd/cookiecutter-basic-pylib
 ```
 
 The line above will fetch automatically the template from github using your
@@ -25,7 +25,7 @@ In case already present, you'll be prompted to re-download the template, this
 can be useful to update it with recent modifications.
 
 ```sh
-> cookiecutter gh:treai-foundations/cookiecutter-basic-pylib
+> cookiecutter gh:treai-rnd/cookiecutter-basic-pylib
 You've downloaded /home/rciatti/.cookiecutters/cookiecutter-basic-pylib before.
 Is it okay to delete and re-download it? [yes]:
 ```
@@ -58,7 +58,7 @@ files
 
 ```sh
 cd ../
-cookiecutter gh:treai-foundations/cookiecutter-basic-pylib -f
+cookiecutter gh:treai-rnd/cookiecutter-basic-pylib -f
 ```
 
 Then, move to the folder of the project, check the `git diff` and decide which changes to apply.

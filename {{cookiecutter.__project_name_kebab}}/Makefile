@@ -59,6 +59,8 @@ prepare-env: ## install dependencies and project in editable mode
 .PHONY: lint
 lint: type-check ipynb-check ## verify the code style
 	pylint ${NAME} tests
+	isort --profile black --check .
+	black --check .
 
 .PHONY: type-check
 type-check: ## run type checker for Python code
@@ -93,6 +95,7 @@ coverage-web: coverage ## check code coverage and open report in web browser
 
 .PHONY: format
 format: ## format the code using black
+	isort --profile black .
 	black .
 
 .PHONY: dist

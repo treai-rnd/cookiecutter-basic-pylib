@@ -30,6 +30,9 @@ optional-dependencies.dev = [
 [tool.setuptools.packages.find]
 include = ["{{ cookiecutter.__project_name_snake }}"]
 
+[tool.setuptools.package-data]
+"{{ cookiecutter.__project_name_snake }}" = ["py.typed"]
+
 [tool.setuptools_scm]
 write_to = "./{{ cookiecutter.__project_name_snake }}/_version.py"
 write_to_template = "__version__ = '{version}'\n"
